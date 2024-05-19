@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button onclick="elebele() " onmouseup="toggle()" >Click </button>
+<div id="textDiv">
+    <p id="elebeletext"></p>
+</div>
+
+<div id="Container"></div>
+<div id="countries"></div>
+
+
+<script>
+let container = document.getElementById("Container");
+
+for (let i = 1; i <= 100; i++) {
+    let numberDiv = document.createElement("div");
+    
+    numberDiv.innerText = i;
+    
+    container.appendChild(numberDiv);
+
+    
+    
+    function elebele() {
+        document.getElementById("elebeletext").innerHTML = "Ele bele";
+    }
+
+    function toggle() {
+  var x = document.getElementById("textDiv");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+    if (i % 2 == 0 ) {
+        numberDiv.style.backgroundColor = "green"
+        numberDiv.style.maxWidth = "30px"
+        
+        
+    }else{
+        numberDiv.style.backgroundColor = "yellow"
+        numberDiv.style.maxWidth = "30px"
+
+    }
+    
+    
+    
+}
+const countryList = [
+	"Afghanistan",
+	"Albania",
+	"Algeria",
+	"American Samoa",
+	"Andorra",
+	"Angola",
+	"Anguilla",
+	"Antarctica",
+	"Antigua and Barbuda",
+	"Argentina",
+	"Armenia",
+	"Aruba",
+	"Australia",
+	"Austria",
+	"Azerbaijan",
+	"Bahamas (the)",
+	"Bahrain",
+	"Bangladesh",
+	"Barbados",
+	"Belarus",
+	"Belgium",
+	"Belize",
+	"Benin",
+	"Bermuda",
+	"Bhutan",
+	"Bolivia (Plurinational State of)",
+	"Bonaire, Sint Eustatius and Saba",
+	"Bosnia and Herzegovina",
+	"Botswana",
+	"Bouvet Island",
+	"Brazil",
+	"British Indian Ocean Territory (the)",
+	"Brunei Darussalam",
+	"Bulgaria",
+	"Burkina Faso",
+	"Burundi",
+	"Cabo Verde",
+	"Cambodia",
+	"Cameroon",
+	"Canada",
+	"Cayman Islands (the)",
+	"Central African Republic (the)",
+	"Chad",
+	"Chile",
+	"China",
+	"Christmas Island",
+	"Cocos (Keeling) Islands (the)",
+	"Colombia",
+	"Comoros (the)",
+	"Congo (the Democratic Republic of the)",
+	"Congo (the)",
+	"Cook Islands (the)",
+	"Costa Rica",
+	"Croatia",
+	"Cuba",
+	"Curaçao",
+	"Cyprus",
+	"Czechia",
+	"Côte d'Ivoire",
+	"Denmark",
+	"Djibouti",
+	"Dominica",
+	"Dominican Republic (the)",
+	"Ecuador",
+	"Egypt"
+]
+
+let countryDiv = document.createElement("div");
+    
+    countryDiv.innerText = countryList;
+    
+    container.appendChild(countryDiv);
+
+    countryDiv.style.wordSpacing = "50px"
+
+    countryDiv.style.lineHeight = "50px"
+
+    countryDiv.style.flex = "50px"
+
+
+</script>
+</body>
+</html>
